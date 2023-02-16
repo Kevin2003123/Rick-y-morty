@@ -1,0 +1,41 @@
+.divcards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+    
+    .divcards div{
+       
+        box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+    }
+
+
+    .divcards div:first-child button{
+        display: none;
+        
+    }
+
+
+    .divSelect{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        flex-wrap: wrap;
+        margin-top: 1.5%;
+    }
+
+    .divSelect select{
+        font-size: larger;
+        border-radius: 2px;
+    }
+
+    .divSelect select:first-child{
+        margin-right: 4%;
+    }
+
+   
+

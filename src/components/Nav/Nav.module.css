@@ -1,0 +1,44 @@
+.divNav{
+   
+   
+    display: flex;
+    background-color: #348781;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 2px;
+    flex-wrap: wrap;
+}
+
+.navlink{
+    margin-left: 0px;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.link{
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    margin-right: 10%;
+    font-size: 1rem;
+    color: black;
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.link:first-child{
+    margin-left: 20px;
+}
+
+
+.display{
+    display: none;
+}
+
