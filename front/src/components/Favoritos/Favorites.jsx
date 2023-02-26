@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react'
+import React,{useEffect, useState} from 'react'
 import s from "./favorites.module.css"
 import Card from '../Card'
 import { useDispatch , useSelector } from 'react-redux'
@@ -7,14 +7,15 @@ export const Favorites = () => {
   
   const dispatch = useDispatch();
   const myFavorites = useSelector(state=>state.allCharacters);
-  
+  const [order, setOrder] = useState("Ascendente") 
 const handleSelect = (e) =>{
+  setOrder(e.target.value)
   dispatch(oderCards(e.target.value))
 }
 
 
 const handleFilter = (e) =>{
-  dispatch(filterCards(e.target.value))
+  dispatch(filterCards(e.target.value, order))
 }
 
 useEffect(()=>{

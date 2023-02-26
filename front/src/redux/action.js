@@ -17,10 +17,10 @@ const deletePj = (id) =>{
     }
 }
 
-const filterCards = (status) =>{
+const filterCards = (status,order) =>{
     return{
         type:"FILTER",
-        payload: status
+        payload: {status,order}
     }
 }
 

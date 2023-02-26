@@ -25,7 +25,10 @@ export default function Detail() {
       }, [detailId]);
 
       
-    return(<div className={s.container}>
+    return(
+      <div className={s.contain}>
+      
+      <div className={s.container}>
         <div className={s.info}>
         <h2>NOMBRE: {character.name}</h2>
         <p>STATUS: {character.status}</p>
@@ -37,5 +40,7 @@ export default function Detail() {
         <div className={s.imgContainer}>
     <img src={character.image} alt="Character"/>
         </div>
-        </div>)
+        </div>
+        </div>
+        )
 };
