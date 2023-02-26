@@ -1,0 +1,29 @@
+.divSearch{
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+   
+}
+
+
+.divSearch input{
+    margin-right: 3%;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+    border-radius: 5px;
+    height: 2.5rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+   text-align: center;
+   padding: 0;
+    width: 200px;
+    color: rgb(108,108,108);
+}
+
+.divSearch button{
+    color: black;
+    background-color: #3CB371;
+   padding: 0.5% 1% 0.5% 1%;
+   border-radius: 5px;
+   font-weight: bold;
+   cursor: pointer;
+}
