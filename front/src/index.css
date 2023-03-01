@@ -8,8 +8,8 @@ body {
   background-image: url(../src/assets/imgs/wallpapersden.com_rick-and-morty-space_1920x1080.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  
 }
 
 code {
