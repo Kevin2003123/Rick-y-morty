@@ -43,3 +43,25 @@
  
     background-size: contain;
 }
+
+@media only screen and (max-width: 756px){
+    .container{
+        flex-direction: column-reverse;
+        padding: 0;
+        margin: 0;
+        font-size: 150%;
+    }
+
+    .imgContainer img{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .imgContainer{
+        padding: 0;
+        margin: 0;
+    }
+
+
+}

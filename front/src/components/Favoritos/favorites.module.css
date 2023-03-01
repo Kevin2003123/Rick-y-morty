@@ -5,11 +5,15 @@
     
         padding-top: 2%;
         padding-bottom: 2%;
+
+        
+        
     }
     
     .divcards div{
        
         box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+        
     }
 
 
@@ -19,6 +23,7 @@
     }
 
 
+
     .divSelect{
         display: flex;
         align-items: center;
@@ -26,6 +31,7 @@
         width: 100%;
         flex-wrap: wrap;
         margin-top: 1.5%;
+        
     }
 
     .divSelect select{
