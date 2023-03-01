@@ -12,8 +12,8 @@ export default function SearchBar(props) {
    }
    return (
       <div className={s.divSearch}>
-          <input type='search' placeholder="Buscar" onChange={handleChange}/>
-      <button onClick={()=>props.onSearch(character)}>Agregar</button>
+          <input type='search' placeholder="ID" onChange={handleChange}/>
+      <button onClick={()=>props.onSearch(character)}>Search</button>
       </div>
    );
 }

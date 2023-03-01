@@ -6,6 +6,7 @@
     width: 100%;
     padding: 0;
     
+    
 }
 
 .container p{
@@ -32,11 +33,13 @@
 
 .contain{
     width: fit-content;
-    background-color:#000000cc;
+    background-color:#000000e3;
     padding: 2%;
     margin-left: auto;
     margin-right: auto;
     box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
     border-radius: 10px;
     margin-top: 10px;
+ 
+    background-size: contain;
 }
