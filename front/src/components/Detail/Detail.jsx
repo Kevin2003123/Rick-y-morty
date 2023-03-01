@@ -8,7 +8,7 @@ export default function Detail() {
     const [character,setCharacter]= useState({});
     
     useEffect(() => {
-        fetch(`https://rickandmortyapi.com/api/character/${detailId}`)
+        fetch(`http://localhost:3002/rickandmorty/detail/${detailId}`)
           .then((response) => response.json())
           .then((char) => {
             if (char.name) {
@@ -21,7 +21,7 @@ export default function Detail() {
           .catch((err) => {
             window.alert("No hay personajes con ese ID");
           });
-        return setCharacter({});
+        
       }, [detailId]);
 
       
@@ -34,7 +34,7 @@ export default function Detail() {
         <p>STATUS: {character.status}</p>
         <p>ESPECIE: {character.species}</p>
         <p>GENERO: {character.gender}</p>
-        <p>ORIGIN: {character.origin?.name}</p>
+        <p>ORIGIN: {character.origin?character.origin.name:""}</p>
         </div>
 
         <div className={s.imgContainer}>

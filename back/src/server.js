@@ -1,23 +1,23 @@
 const http = require("http");
-const characters = require("./utils/data")
+const getCharById = require("./controllers/getCharById")
+const getCharDetail = require("./controllers/getCharDetail")
 http.createServer((req, res)=>{
 res.setHeader('Access-Control-Allow-Origin', '*');
 
-if(req.url.split("/").filter((x,i)=> i!==3).join("/")== "/rickandmorty/character"){
+if(req.url.includes("onsearch")){
     
-    let id = req.url.split("/")[3]
-    let character = characters.find(x=>x.id==id)
-    if(character){
-    res.writeHead(200,{"Content-Type": "application/json"})
-    res.end(JSON.stringify(character));
-    }else{
-    res.writeHead(404,{"Content-Type": "application/json"})
-    res.end(JSON.stringify({}))
-    }
-   return;
+    getCharById(res,Number(req.url.split("/").at(-1)));
+    return
 }
+
+if(req.url.includes("detail")){
+    getCharDetail(res,Number(req.url.split("/").at(-1)));
+    return
+}
+
 
 res.writeHead(404,{'Content-Type':'text/plain'})
 res.end("Route not found")
+
 
 }).listen(3002,"localhost")

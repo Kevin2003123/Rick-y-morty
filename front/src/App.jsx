@@ -31,7 +31,7 @@ function App ({deletePj}) {
 }
 
   function onSearch(character) {
-    fetch(`http://localhost:3002/rickandmorty/character/${character}`)
+    fetch(`http://localhost:3002/rickandmorty/onsearch/${character}`)
        .then((response) => response.json())
        .then((data) => {
           if (data.name) {
