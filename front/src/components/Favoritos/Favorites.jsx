@@ -38,7 +38,7 @@ useEffect(()=>{
 
 </div>
     <div className={s.divcards}>
-   {myFavorites.map((x)=>(<Card key={x.id} id={x.id} name={x.name} species={x.species} gender={x.gender} image={x.image} />))}
+   {myFavorites.map((x)=>(<Card className={s.character} key={x.id} id={x.id} name={x.name} species={x.species} gender={x.gender} image={x.image} />))}
    </div>
 
    </>

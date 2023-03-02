@@ -19,7 +19,7 @@ flex-wrap: wrap;
 .divcard {
     
     
-  margin-bottom: 2%;
+  margin-bottom: 1% ;
     margin-left: auto;
    margin-right: auto;
  border-radius: 10px;
@@ -53,11 +53,9 @@ flex-wrap: wrap;
 
     background-color: transparent;
     border: 0 solid transparent;
-    margin-left: 1%;
+    margin-left: 2%;
     font-size: larger;
     padding: 0;
-   
-    margin-left: 2%;
     cursor: pointer;
     
 }

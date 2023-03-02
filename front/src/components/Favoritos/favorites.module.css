@@ -22,7 +22,9 @@
         
     }
 
-
+    .divcards div:last-child{
+        margin-bottom: 20px;
+    }
 
     .divSelect{
         display: flex;
@@ -44,5 +46,4 @@
     }
 
  
-   
 
