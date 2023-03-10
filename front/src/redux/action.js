@@ -1,23 +1,23 @@
+import axios from "axios";
 
 
-
-
-
-const addPj = (pj)=>{
+export const addPj = (pj)=>{
+    axios.post('http://localhost:3002/rickandmorty/fav',{...pj})
     return{
         type: "ADD_PJ",
         payload: pj
     }
 }
 
-const deletePj = (id) =>{
+export const deletePj = (id) =>{
+    axios.delete(`http://localhost:3002/rickandmorty/fav/${id}`)
     return{
         type: "DELETE_PJ",
         payload: id
     }
 }
 
-const filterCards = (status,order) =>{
+export const filterCards = (status,order) =>{
     return{
         type:"FILTER",
         payload: {status,order}
@@ -25,7 +25,7 @@ const filterCards = (status,order) =>{
 }
 
 
-const oderCards = (id) =>{
+export const oderCards = (id) =>{
     return{
         type:"ORDER",
         payload: id
@@ -35,9 +35,3 @@ const oderCards = (id) =>{
 
 
 
-module.exports= {
-    addPj,
-    deletePj,
-    filterCards,
-    oderCards
-}

@@ -13,11 +13,11 @@ export default function Nav ({onSearch}){
     },[location])
 
     
-    return (<div className={s.divNav}>
-        <div className={s.navlink}>
-        <Link className={`${s.link} ${login && s.display}`} to={"/home"}>HOME</Link>
-        <Link className={`${s.link} ${login && s.display}`} to={"/about"}>About</Link>
-        <Link className={`${s.link} ${login && s.display}`} to={"/favorites"}>Favorites</Link>
+    return (<div className={`${s.divNav} ${login && s.display}`}>
+        <div className={`${s.navlink}`}>
+        <Link className={`${s.link}`} to={"/home"}>HOME</Link>
+        <Link className={`${s.link}`} to={"/about"}>About</Link>
+        <Link className={`${s.link}`} to={"/favorites"}>Favorites</Link>
         </div>
 
         <SearchBar onSearch={onSearch}/>

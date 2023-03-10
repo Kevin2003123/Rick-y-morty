@@ -20,11 +20,11 @@
     display: flex;
     justify-content: center;
     background-image: url("../../assets/imgs/pngtree-seamless-pattern-cosmic-objects-set-hand-drawn-vector-doodles-rockets-planets-image_678138.jpg");
-    margin-left: auto;
-    margin-right: auto;
+    
     padding-top: 100px;
     padding-bottom: 100px;
-    margin-top: 2%;
+    margin: auto;
+    margin-top: 8%;
     border-radius: 10px;
     box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
 }
@@ -79,6 +79,7 @@
         padding: 0;
         padding-top: 50px;
         padding-bottom: 50px;
+      
     }
 
 

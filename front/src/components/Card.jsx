@@ -4,7 +4,7 @@ import {Link} from "react-router-dom"
 import { connect } from "react-redux";
 import { addPj, deletePj } from "../redux/action";
 import {useLocation} from 'react-router-dom'
-
+import axios from 'axios';
  export function Card(props) {
    let location = useLocation()
    useEffect(()=>{
@@ -19,10 +19,12 @@ import {useLocation} from 'react-router-dom'
       if(isFav) {
          setFav(false)
          props.deletePj(props.id)
+  
       }else{
          setFav(true)
          props.addPj(props)
-        
+         
+         
       }
    }
 
@@ -71,4 +73,4 @@ export const mapStateToProps = (state)=>{
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps) (Card)
+export default connect(mapStateToProps, mapDispatchToProps)(Card)
