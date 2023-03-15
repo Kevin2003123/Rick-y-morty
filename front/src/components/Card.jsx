@@ -2,7 +2,7 @@ import React,{useState, useEffect} from "react";
 import s from "./Cards.module.css"
 import {Link} from "react-router-dom"
 import { connect } from "react-redux";
-import { addPj, deletePj } from "../redux/action";
+import { addPj, deletePj, getPj } from "../redux/action";
 import {useLocation} from 'react-router-dom'
 import axios from 'axios';
  export function Card(props) {
@@ -62,7 +62,8 @@ import axios from 'axios';
 export const mapDispatchToProps = (dispatch)=>{
    return{
       addPj: (pj)=> dispatch(addPj(pj)),
-      deletePj: (id) => dispatch(deletePj(id))
+      deletePj: (id) => dispatch(deletePj(id)),
+      getPj: ()=> dispatch(getPj())
    }
 }
 
