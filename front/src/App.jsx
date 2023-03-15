@@ -44,11 +44,12 @@ function App ({deletePj}) {
        });
  }
 
- const onClose = (id) =>{
+ const onClose = async(id) =>{
   
     setCharacters([...characters].filter((x)=> x.id !== id))
     deletePj(id);
-    axios.delete(`http://localhost:3002/rickandmorty/fav/${id}`)
+    
+    
  }
 
 

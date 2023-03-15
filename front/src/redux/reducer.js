@@ -13,6 +13,9 @@ const rootReducer = (state = initialState, { type, payload }) => {
       return {...state, allCharacters: payload.order=== "Ascendente"?[...state.myFavorites].filter((x)=>x.gender===payload.status).sort((a,b)=>a.id-b.id):[...state.myFavorites].filter((x)=>x.gender===payload.status).sort((a,b)=>b.id-a.id) }
     case "ORDER":
       return {...state, allCharacters: payload==="Ascendente"?[...state.myFavorites].sort((a,b)=>a.id-b.id): [...state.myFavorites].sort((a,b)=>b.id-a.id) }
+
+    case "GET_PJ":
+      return {...state, myFavorites: payload}
   default:
     return state
   }
