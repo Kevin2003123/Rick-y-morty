@@ -13,7 +13,7 @@ import Login from "./components/Form/Form.jsx";
 import Favorites from './components/Favoritos/Favorites'
 import { connect } from 'react-redux'
 import { deletePj } from './redux/action'
-import axios from 'axios'
+
 function App ({deletePj}) {
 
   const [characters, setCharacters] = useState([])
@@ -35,7 +35,7 @@ function App ({deletePj}) {
     fetch(`http://localhost:3002/rickandmorty/onsearch/${character}`)
        .then((response) => response.json())
        .then((data) => {
-         console.log(data);
+         console.log(data.status);
           if (data.name) {
              setCharacters((oldChars) => [...oldChars].some((x)=>x.id=== data.id)? [...oldChars] : [...oldChars, data]);
           } else {

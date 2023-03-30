@@ -1,17 +1,22 @@
 import axios from "axios";
 
 export const addPj = (pj) => {
-  const { name, id, species, gender, image } = pj;
-
+  const { name, id, species, gender, image, origin,status } = pj;
+  console.log(pj);
   try {
+
+   
     return async (dispatch) => {
+     
       const { data } = await axios.post(
         "http://localhost:3002/rickandmorty/fav",
-        { name, id, species, gender, image }
+        { name, id, species, gender, image, origin, status }
       );
+
+      
       return dispatch({
         type: "ADD_PJ",
-        payload: data,
+        payload: {id: data.CharacterId, name:data.name, species: data.species, gender: data.gender, image: data.image, origin: data.origin, status: data.status} ,
       });
     };
   } catch (error) {
@@ -26,6 +31,7 @@ export const deletePj = (id) => {
      const {data} =await axios.delete(
       `http://localhost:3002/rickandmorty/fav/${id}`,
     );
+    console.log(data.id)
     return dispatch({
       type: "DELETE_PJ",
       payload: data.id,
@@ -39,10 +45,15 @@ export const deletePj = (id) => {
 export const getPj = () =>{
 try {
   return async (dispatch) => {
-    const res = await axios("http://localhost:3002/rickandmorty/fav")
+    const {data} = await axios("http://localhost:3002/rickandmorty/fav")
     return dispatch({
       type: "GET_PJ",
-      payload: res.data
+      payload: data.map(data=>{
+return {id: data.CharacterId, name:data.name, species: data.species, gender: data.gender, image: data.image, origin: data.origin, status: data.status}
+      })
+      
+      
+      
     })
   }
   

@@ -34,7 +34,7 @@ export default function Detail() {
         <p>STATUS: {character.status}</p>
         <p>ESPECIE: {character.species}</p>
         <p>GENERO: {character.gender}</p>
-        <p>ORIGIN: {character.origin?character.origin.name:""}</p>
+        <p>ORIGIN: {character.origin}</p>
         </div>
 
         <div className={s.imgContainer}>

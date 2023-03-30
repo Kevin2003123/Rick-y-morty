@@ -1,16 +1,16 @@
 import React,{useState, useEffect} from "react";
 import s from "./Cards.module.css"
-import {Link} from "react-router-dom"
+import {Link, useLocation} from "react-router-dom"
 import { connect } from "react-redux";
 import { addPj, deletePj, getPj } from "../redux/action";
-import {useLocation} from 'react-router-dom'
-import axios from 'axios';
+
+
  export function Card(props) {
    let location = useLocation()
    useEffect(()=>{
      if(props.myFavorites.some((x)=> x.id === props.id)) setFav(true)
-      if(location.pathname==="/favorites") setStyle(true);
-
+      else setFav(false)
+     if(location.pathname==="/favorites") setStyle(true);
 
    },[props.myFavorites])
    const [isFav, setFav] = useState(false);
@@ -23,7 +23,7 @@ import axios from 'axios';
       }else{
          setFav(true)
          props.addPj(props)
-         
+        
          
       }
    }
